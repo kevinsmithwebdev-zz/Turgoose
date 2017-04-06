@@ -1,0 +1,21 @@
+.media-title {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  color: #0B3C5D;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.row-video {
+  margin-top: 50px;
+}
+.row-caption {
+  margin-bottom: 50px;
+
+}
+.row-caption div h4 {
+  color: #0B3C5D;
+  font-size: 24px;
+  font-weight: bold;
+}

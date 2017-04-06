@@ -1,0 +1,14 @@
+.contact-element {
+    font: inherit;
+    color: inherit;
+    font-size: 18px;
+    margin: 25px;
+    width: 70%;
+}
+
+.contact-element form {
+    font: inherit;
+    color: green !important;
+    font-size: 18px;
+    width: 70%;
+}
