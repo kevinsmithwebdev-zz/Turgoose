@@ -1,3 +1,4 @@
+// external js: masonry.pkgd.js, imagesloaded.pkgd.js
 
 // init Masonry after all images have loaded
 $(document).ready(function() {
@@ -5,6 +6,9 @@ $(document).ready(function() {
   var strRT = "http://www.rachelturgoose.com/img/gallery/gallery.json";
 
   $.getJSON(proxyStr + strRT, function(data) {
+
+    // set up carousel
+
     var myImgs = {
       list: [],
       path: 'img/gallery/',
@@ -17,58 +21,40 @@ $(document).ready(function() {
       colsTBL: 3
     }
 
+    var $carouselArea = $("#carousel-area");
 
-    // set up files
     myImgs.list=data;
+
+    //
 
     for (var i = 0 ; i < data.length ; i++) {
       myImgs.list[i].tName = data[i].fName.substr(0, data[i].fName.lastIndexOf('.')) +
             "-tn." + data[i].fName.substr(data[i].fName.lastIndexOf('.') + 1);
     }
 
-    // set up carousel
-    
-    var $carouselArea = $("#carousel-area");
-
-    var interval;
-
-
     for (var i = 0 ; i < myImgs.list.length ; i++) {
-      $carouselArea.append('<img class = "transparent imgCSL" src="' + myImgs.path +
+      $carouselArea.append('<img class = "transparenta" src="' + myImgs.path +
           myImgs.list[i].tName + '" alt="picture" height="' + myImgs.winHeight + '">')
     }
 
+    //
+    // var interval;
+    //
+    // // set delay for images
+    // function startCSL() {
+    //   interval = setInterval( showImage, myImgs.delayCSL );
+    // }
+    //
+    // function pauseCSL() {
+    //   clearInterval(interval);
+    // }
+    //
+    // $('#carousel-area').on('mouseenter', pauseCSL).on('mouseleave', startCSL);
+    //
+    // showImage();
+    // startCSL();
 
-    function startCSL() {
-      interval = setInterval( showImage, myImgs.delayCSL );
-    }
-
-    function pauseCSL() {
-      clearInterval(interval);
-    }
-
-    function showImage() {
-      $("#carousel-area img:nth-child(" + myImgs.counterCSL +
-          ")").removeClass("transparent");
-
-      if (myImgs.counterCSL > 1) {
-        $("#carousel-area img:nth-child(" + (myImgs.counterCSL-1) +
-            ")").addClass("transparent");
-      } else {
-        $("#carousel-area img:nth-child(" + myImgs.list.length +
-            ")").addClass("transparent");
-      }
-      if (++myImgs.counterCSL > myImgs.list.length) {
-        myImgs.counterCSL = 1;
-      }
-    }  showImage()
-
-    $('#carousel-area').on('mouseenter', pauseCSL).on('mouseleave', startCSL);
-
-    showImage();
-    startCSL();
-
-    // set up freewall grid
+    // Set up freewall grid
 
     var html = '<div class="grid-sizer"></div>';
     var strURL = "http://www.rachelturgoose.com/img/gallery/";
@@ -80,7 +66,7 @@ $(document).ready(function() {
     }
     $('#grid-area').html(html);
 
-    var $grid = $('.grid').imagesLoaded(function() {
+    var $grid = $('.grid').imagesLoaded( function() {
       $grid.masonry({
         itemSelector: '.grid-item',
         percentPosition: true,

@@ -37,3 +37,34 @@ body { font-family: sans-serif; }
   display: block;
   width: 100%;
 }
+
+#container {
+  width: 80%;
+  margin: auto;
+}
+
+#carousel-area {
+  padding: 20px;
+  height: 300px;
+  background-color: green;
+}
+
+#grid-area {
+  padding: 20px;
+  background-color: red;
+}
+
+.item {
+  background: rgb(135, 199, 135);
+  width: 320px;
+  height: 320px;
+}
+
+.transparent {
+    opacity: 0;
+    filter: alpha(opacity=0); /* For IE8 and earlier */
+}
+
+.imgCSL {
+    position: absolute;
+}
