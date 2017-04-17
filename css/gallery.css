@@ -26,7 +26,7 @@ body { font-family: sans-serif; }
 
 .grid-sizer,
 .grid-item {
-  width: 33.333%;
+  width: 20%; /* sets number of cols in grid */
 }
 
 .grid-item {
@@ -36,9 +36,37 @@ body { font-family: sans-serif; }
 .grid-item img {
   display: block;
   width: 100%;
+  padding: 0;
 }
 
 #carousel-area {
-  background-color: green;
-  height: 300px;
+  padding: 5px;
+}
+
+#carousel-area img {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  border-radius: 3px;
+}
+
+.transparent {
+  opacity: 0;
+  filter: alpha(opacity=0); /* For IE8 and earlier */
+}
+
+#carousel-caption-area {
+  text-align: center;
+  overflow: auto;
+  padding: 10px;
+}
+
+hr {
+  background-color: #0B3C5D;
+  color: #0B3C5D;
+  height: 2px;
+  opacity: 0.5;
+  border: 0;
 }
