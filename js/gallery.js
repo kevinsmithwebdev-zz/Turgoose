@@ -12,15 +12,8 @@ $(document).ready(function() {
     var myImgs = {
       list: [],
       path: 'img/gallery/',
-      heightCSL: '400px',
-      heightCaptCSL: '60px',
-      fadeCSL: 1000,
-      delayCSL: 5000,
-      counterCSL: 1, // 1-indexed
     }
 
-    var $carouselArea = $("#carousel-area");
-    var $carouselCaptArea = $("#carousel-caption-area");
 
     myImgs.list=data;
 
@@ -31,46 +24,6 @@ $(document).ready(function() {
             "-tn." + data[i].fName.substr(data[i].fName.lastIndexOf('.') + 1);
     }
 
-    // put pics in carousel
-
-    for (var i = 0 ; i < myImgs.list.length ; i++) {
-      $carouselArea.append('<img class = "transparent carousel center" src="' + myImgs.path +
-          myImgs.list[i].tName + '" alt="picture" height="' + myImgs.heightCSL + '">');
-    }
-
-    $carouselArea.height(myImgs.heightCSL);
-    $carouselCaptArea.height(myImgs.heightCaptCSL);
-
-    var interval;
-
-    // set delay for images
-    function startCSL() { interval = setInterval(showImage, myImgs.delayCSL ); }
-    function pauseCSL() { clearInterval(interval); }
-
-    function showImage() {
-
-      $("#carousel-area img:nth-child(" + myImgs.counterCSL +
-          ")").fadeTo(myImgs.fadeCSL, 1 );
-      $carouselCaptArea.hide().html("<h4>" + myImgs.list[myImgs.counterCSL-1].caption +
-           "</h4>").fadeIn(myImgs.fadeCSL);
-      if (myImgs.counterCSL > 1) {
-        $("#carousel-area img:nth-child(" + (myImgs.counterCSL-1) +
-            ")").fadeTo( myImgs.fadeCSL, 0 );
-      } else {
-        $("#carousel-area img:nth-child(" + myImgs.list.length +
-            ")").fadeTo(myImgs.fadeCSL, 0 );;
-      }
-      if (++myImgs.counterCSL > myImgs.list.length) {
-        myImgs.counterCSL = 1;
-      }
-    }  // showImage()
-
-    $carouselArea.on('mouseenter', pauseCSL).on('mouseleave', startCSL);
-
-    showImage();
-
-    startCSL();
-
     // Set up freewall grid
 
     var html = '<div class="grid-sizer"></div>';
@@ -78,8 +31,10 @@ $(document).ready(function() {
     var w;
     for (var i = 0 ; i < data.length ; i++) {
       w = 200;
-      html += '<div class="grid-item"><img src="' + strURL + myImgs.list[i].tName +
-            '"></div>\n';
+      // html += '<div class="grid-item"><img src="' + strURL + myImgs.list[i].tName +
+      //       '"></div>\n';
+      html += '<a data-fancybox="gallery" href="' + strURL + myImgs.list[i].fName + '" data-caption="' + myImgs.list[i].caption + '"><div class="grid-item"><img src="' + strURL + myImgs.list[i].tName +
+            '"></div></a>\n';
     }
     $('#grid-area').html(html);
 
