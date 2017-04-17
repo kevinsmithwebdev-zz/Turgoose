@@ -37,6 +37,7 @@ body { font-family: sans-serif; }
   display: block;
   width: 100%;
   padding: 1px;
+  border-radius: 3px;
 }
 
 hr {

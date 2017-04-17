@@ -61,12 +61,21 @@ body.main-page {
     background: transparent;
     border-width: 0px;
 }
+
+.navbar-brand {
+	color: #1D2731 !important;
+	font-weight: bold;
+	font-size: 135%;
+	opacity: 0.5;
+}
+
 .nav.navbar-nav li a {
   color: #328CC1;
 	font-weight: bold;
 	font-size: 125%;
 	text-transform: uppercase;
 }
+
 .nav.navbar-nav li a:hover {
 	color: #0B3C5D;
 }

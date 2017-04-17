@@ -28,8 +28,14 @@ $(document).ready(function () {
   function initNav() {
     // insert the nav buttons on current page
 
-    var menuStr = '<div class="container-fluid"><ul class="nav navbar-nav">'
+    var menuStr = '<div class="container-fluid"><div class="navbar-header">' +
+          '<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">' +
+          '<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>' +
+          '</button><a class="navbar-brand" href="#">rachelturgoose.com</a></div>';
+
+    menuStr += '<div class="collapse navbar-collapse" id="myNavbar"><ul class="nav navbar-nav">';
     for (var i = 0 ; i < menuList.length ; i++) {
+
       menuStr += '<li><a href="' + menuList[i].file + '">' + menuList[i].name +
             '</a></li>';
     }
