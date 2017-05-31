@@ -1,5 +1,8 @@
-###############
-# image files #
-###############
+# image files
 
 img/*
+
+
+# save folder, downloaded crap from client, etc.
+
+zzz\ save/*
