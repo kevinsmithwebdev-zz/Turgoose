@@ -78,9 +78,5 @@ $(document).ready(function () {
 
       // page identifier on end of <title> and text title
 
-
-
-
-
-    }
+  }
 });

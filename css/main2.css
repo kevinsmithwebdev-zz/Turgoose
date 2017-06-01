@@ -1,5 +1,5 @@
 body.main-page {
-  background: url("../img/BG.jpg") no-repeat center top fixed;
+  background: url("../img/BG2.jpg") no-repeat center top fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -52,7 +52,7 @@ body.main-page {
 }
 
 .nav.navbar-nav li a:hover {
-  color: #0E0B16;
+  color: green;
 }
 
 .navbar-nav {
@@ -77,12 +77,12 @@ body.main-page {
 
 body.other-page {
   background-color: #4717F6;
-  color: #0E0B16;
+  color: green;
 }
 
 .listing {
   font-family: 'Open Sans', sans-serif;
-  color: #0E0B16;
+  color: green;
   margin: 20px 0px 20px 0px;
   margin: auto;
   width: 80%;
@@ -144,7 +144,7 @@ footer {
 }
 
 footer span a {
-  color: #0B3C5D;
+  color: green;
 }
 
 footer span a:hover {
