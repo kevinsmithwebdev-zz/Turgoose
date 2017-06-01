@@ -1,0 +1,1 @@
+*{box-sizing:border-box}html{overflow-y:scroll}body{font-family:sans-serif}.grid{background:#f9cf00}.grid:after{content:'';display:block;clear:both}.grid-sizer{width:20%}.grid-item{width:20%;float:left}.grid-item img{display:block;width:100%;padding:1px;border-radius:3px}hr{background-color:#4484ce;color:#0B3C5D;height:2px;opacity:0.5;border:0}#text-area{text-align:center}

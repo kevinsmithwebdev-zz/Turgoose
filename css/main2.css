@@ -5,7 +5,7 @@ body.main-page {
   -o-background-size: cover;
   background-size: cover;
   min-height: 100%;
-  color: #1D2731;
+  color: #E7DFDD;
 }
 
 .title-area {
@@ -38,21 +38,21 @@ body.main-page {
 }
 
 .navbar-brand {
-  color: #D9B310 !important;
+  color: #4717F6 !important;
   font-weight: bold;
   font-size: 135%;
   opacity: 0.5;
 }
 
 .nav.navbar-nav li a {
-  color: #328CC1;
+  color: #A239CA;
   font-weight: bold;
   font-size: 125%;
   text-transform: uppercase;
 }
 
 .nav.navbar-nav li a:hover {
-  color: #0B3C5D;
+  color: #0E0B16;
 }
 
 .navbar-nav {
@@ -68,21 +68,21 @@ body.main-page {
 }
 
 .loco-btn a {
-  color: #1D2731 !important;
+  color: #E7DFDD !important;
 }
 
 .loco-btn a:hover {
-  color: #1D2731 !important;
+  color: #E7DFDD !important;
 }
 
 body.other-page {
-  background-color: #D9B310;
-  color: #0B3C5D;
+  background-color: #4717F6;
+  color: #0E0B16;
 }
 
 .listing {
   font-family: 'Open Sans', sans-serif;
-  color: #0B3C5D;
+  color: #0E0B16;
   margin: 20px 0px 20px 0px;
   margin: auto;
   width: 80%;
@@ -133,7 +133,7 @@ hr {
 }
 
 footer {
-  border-top: 1px solid #1D2731;
+  border-top: 1px solid #E7DFDD;
   width: 70%;
   margin: 0 auto;
   margin-top: 50px;
@@ -148,7 +148,7 @@ footer span a {
 }
 
 footer span a:hover {
-  color: #328CC1;
+  color: #A239CA;
 }
 
 .footer-element {

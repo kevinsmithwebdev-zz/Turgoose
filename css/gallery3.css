@@ -11,7 +11,7 @@ body {
 }
 
 .grid {
-  background: #D9B310;
+  background: #f9cf00;
 }
 
 .grid:after {
@@ -37,7 +37,7 @@ body {
 }
 
 hr {
-  background-color: #0B3C5D;
+  background-color: #4484ce;
   color: #0B3C5D;
   height: 2px;
   opacity: 0.5;
