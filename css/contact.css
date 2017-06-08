@@ -2,13 +2,8 @@
     font: inherit;
     color: inherit;
     font-size: 18px;
-    margin: 25px;
-    width: 70%;
-}
+    margin: 0 auto;
+    padding: 20px 0;
 
-.contact-element form {
-    font: inherit;
-    color: green !important;
-    font-size: 18px;
     width: 70%;
 }

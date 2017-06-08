@@ -4,16 +4,16 @@ $(document).ready(function () {
       { name: 'Media', file: 'media.html' },
       { name: 'Gallery', file: 'gallery.html' },
       { name: 'Bio', file: 'bio.html' },
-      { name: 'Press Kit', file: 'presskit.html' },
+      // { name: 'Press Kit', file: 'presskit.html' },
       { name: 'Resume', file: 'resume.html' },
       { name: 'Teaching', file: 'teaching.html' },
-      { name: 'Partners', file: 'partners.html' },
+      // { name: 'Partners', file: 'partners.html' },
       { name: 'Contact', file: 'contact.html' }
     ];
 
   var footerList = ['Rachel Turgoose &copy;2017',
-        '<a href="mailto:rachelturgoose@outlook.com">rachelturgoose@outlook.com</a>',
-        '(555)555-5555'];
+        '<a href="mailto:rachelturgoosemusic@gmail.com?Subject=inquiry%20from%20web%20page" target="_top">rachelturgoosemusic@gmail.com</a> ',
+        '484-459-8884'];
 
   pageFName = window.location.pathname.split('/').pop();
 
@@ -35,9 +35,7 @@ $(document).ready(function () {
 
     menuStr += '<div class="collapse navbar-collapse" id="myNavbar"><ul class="nav navbar-nav">';
     for (var i = 0 ; i < menuList.length ; i++) {
-
-      menuStr += '<li><a href="' + menuList[i].file + '">' + menuList[i].name +
-            '</a></li>';
+      menuStr += '<li><a href="' + menuList[i].file + '">' + menuList[i].name + '</a></li>';
     }
     menuStr += "</ul></div>";
 
@@ -51,8 +49,6 @@ $(document).ready(function () {
       e.preventDefault();
     });
   } // initNav()
-
-
 
   function initFooter() {
       // insert the footer on current page
@@ -74,8 +70,6 @@ $(document).ready(function () {
       $('title').append(" - " + pageIdent.name);
       $('.title').append(" - " + pageIdent.name);
     }
-
-
       // page identifier on end of <title> and text title
 
   }

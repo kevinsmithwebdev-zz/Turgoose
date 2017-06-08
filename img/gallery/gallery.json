@@ -4,14 +4,5 @@
   { "fName": "RT-003.jpg", "caption": "caption 3" },
   { "fName": "RT-004.jpg", "caption": "caption 4" },
   { "fName": "RT-005.jpg", "caption": "caption 5" },
-  { "fName": "RT-006.jpg", "caption": "caption 6" },
-  { "fName": "RT-007.jpg", "caption": "caption 7" },
-  { "fName": "RT-008.jpg", "caption": "caption 8" },
-  { "fName": "RT-009.jpg", "caption": "caption 9" },
-  { "fName": "RT-010.jpg", "caption": "caption 10" },
-  { "fName": "RT-011.jpg", "caption": "caption 11" },
-  { "fName": "RT-012.jpg", "caption": "caption 12" },
-  { "fName": "RT-013.jpg", "caption": "caption 13" },
-  { "fName": "RT-014.jpg", "caption": "caption 14" },
-  { "fName": "RT-015.jpg", "caption": "caption 15" }
+  { "fName": "RT-006.jpg", "caption": "caption 6" }
 ]
