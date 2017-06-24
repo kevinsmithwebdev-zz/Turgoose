@@ -5,7 +5,7 @@ $(document).ready(function() {
   var proxyStr = "http://CORS-Anywhere.HerokuApp.com/";
   var strRT = "http://www.rachelturgoose.com/img/gallery/gallery.json";
 
-  $.ajax({url: proxyStr + strRT,
+  $.ajax( { url: proxyStr + strRT, cache: false,
     success: function(data){
 
       // set up carousel

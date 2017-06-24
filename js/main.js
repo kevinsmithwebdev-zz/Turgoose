@@ -5,7 +5,6 @@ $(document).ready(function () {
       { name: 'Gallery', file: 'gallery.html' },
       { name: 'Bio', file: 'bio.html' },
       // { name: 'Press Kit', file: 'presskit.html' },
-      { name: 'Resume', file: 'resume.html' },
       { name: 'Teaching', file: 'teaching.html' },
       // { name: 'Partners', file: 'partners.html' },
       { name: 'Contact', file: 'contact.html' }
@@ -16,6 +15,9 @@ $(document).ready(function () {
         '484-459-8884'];
 
   pageFName = window.location.pathname.split('/').pop();
+
+  var titleName = "Rachel Turgoose";
+  var titleDescr = "Vocalist. Woodwind Instrumentalist. Educator.";
 
   initNav();
 
@@ -66,10 +68,16 @@ $(document).ready(function () {
       return item.file === pageFName;
       });
 
-    if (pageIdent.name !== 'Home') {
+    $('.title-area').append("<span class = 'title'>" + titleName + "</span>");
+    $('.title-area').append("<span class = 'sub-title'>" + titleDescr + "</span>");
+
+    // if (pageIdent.name !== 'Home') {
       $('title').append(" - " + pageIdent.name);
       $('.title').append(" - " + pageIdent.name);
-    }
+    // }
+
+    // <span class = 'title'>Rachel Turgoose</span>
+    // <span class = 'sub-title'>Austin Area Singer, Saxophonist, and Teacher</span>
       // page identifier on end of <title> and text title
 
   }
