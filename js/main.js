@@ -1,12 +1,12 @@
 $(document).ready(function () {
   var menuList = [
-      { name: 'Home', file: 'test.html' }, //*** change back to index
+      { name: 'Home', file: 'index.html' },
       { name: 'Media', file: 'media.html' },
       { name: 'Gallery', file: 'gallery.html' },
       { name: 'Bio', file: 'bio.html' },
       // { name: 'Press Kit', file: 'presskit.html' },
       { name: 'Teaching', file: 'teaching.html' },
-      // { name: 'Partners', file: 'partners.html' },
+      { name: 'Partners', file: 'partners.html' },
       { name: 'Contact', file: 'contact.html' }
     ];
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
   pageFName = window.location.pathname.split('/').pop();
 
   var titleName = "Rachel Turgoose";
-  var titleDescr = "Vocalist. Woodwind Instrumentalist. Educator.";
+  var titleDescr = "Vocals. Woodwinds. Educator.";
 
   initNav();
 
@@ -55,12 +55,13 @@ $(document).ready(function () {
   function initFooter() {
       // insert the footer on current page
 
-      var footerStr = '';
+      var footerStr = '<div class="footer-container"><hr>';
       for (var i = 0 ; i < footerList.length ; i++) {
-        footerStr += '<span class = "footer-element">' + footerList[i] + '</span>';
+        footerStr += '<span>' + footerList[i] + '</span>';
       }
-      $('footer').html(footerStr);
 
+      footerStr += '</div>';
+      $('footer').html(footerStr);
     }
 
   function addPageIdent() {
@@ -71,14 +72,20 @@ $(document).ready(function () {
     $('.title-area').append("<span class = 'title'>" + titleName + "</span>");
     $('.title-area').append("<span class = 'sub-title'>" + titleDescr + "</span>");
 
-    // if (pageIdent.name !== 'Home') {
+    if (pageIdent.name !== 'Home') {
       $('title').append(" - " + pageIdent.name);
       $('.title').append(" - " + pageIdent.name);
-    // }
-
-    // <span class = 'title'>Rachel Turgoose</span>
-    // <span class = 'sub-title'>Austin Area Singer, Saxophonist, and Teacher</span>
-      // page identifier on end of <title> and text title
+    }
 
   }
+
+  var bgNum = 1;
+
+  setInterval( function(){
+      (bgNum==4)?(bgNum=1):(bgNum++);
+      $('body').css('background-image', 'url(' + 'img/BG' + bgNum + '.jpg' + ')');
+    }, 5000);
+
+
+
 });

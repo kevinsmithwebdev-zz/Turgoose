@@ -1,5 +1,6 @@
 body {
-  background: url("../img/BG.jpg") no-repeat center top fixed;
+  background: url("../img/BG1.jpg") no-repeat center top fixed;
+  transition: background 0.5s linear;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -115,29 +116,30 @@ hr {
 }
 
 footer {
-  border-top: 1px solid #E7DFDD;
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
-  margin-top: 50px;
+}
+
+footer hr {
+  margin-top: 10px;
   margin-bottom: 10px;
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flexbox;
 }
 
-footer span a {
-  color: #aaaaee;
-}
-
-footer span a:hover {
-  color: #A239CA;
-}
-
-.footer-element {
-  width: calc( 100% / 3);
+.footer-container {
   text-align: center;
+}
+
+.footer-container span {
+  color: #aaaaee;
+  float: center;
+  display: inline-flex;
+  margin-left: 8px;
+  margin-right: 8px;
   font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
+}
+
+.footer-container span a:hover {
+  color: #4717F6;
 }
 
 .text-paragraph {

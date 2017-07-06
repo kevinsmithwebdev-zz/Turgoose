@@ -1,7 +1,8 @@
 @import "colors.sass"
 
 body
-  background: url('../img/BG.jpg') no-repeat center top fixed
+  background: url('../img/BG1.jpg') no-repeat center top fixed
+  transition: background 0.5s linear
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
@@ -104,24 +105,26 @@ hr
   margin: 0 auto
 
 footer
-  border-top: 1px solid $color-4
-  width: 70%
+  width: 75%
   margin: 0 auto
-  margin-top: 50px
-  margin-bottom: 10px
-  display: flex
-  display: -webkit-flex
-  display: -ms-flexbox
-  span a
-    color: $color-1
-    &:hover
-      color: $color-2
 
-.footer-element
-  width: calc( 100% / 3)
+footer
+  hr
+    margin-top: 10px
+    margin-bottom: 10px
+
+.footer-container
   text-align: center
-  font-size: 18px
-  font-family: 'Open Sans', sans-serif
+  span
+    color: $color-1
+    float: center
+    display: inline-flex
+    margin-left: 8px
+    margin-right: 8px
+    font-size: 18px
+  span a
+    &:hover
+      color: $color-3
 
 .text-paragraph
   margin: 0 auto
