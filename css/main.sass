@@ -1,14 +1,19 @@
 @import "colors.sass"
 
+body:not(.loaded)
+  display:none
+
+
 body
-  background: url('../img/BG00.jpg') no-repeat center top fixed
-  transition: background 1s linear
+
+  background: url('img/BG00.jpg') no-repeat center top fixed
+  transition: background 1s ease
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
   min-height: 100%
-  color: $color-4
+
 
 .title-area
   font-family: 'Bubblegum Sans', cursive

@@ -23,6 +23,8 @@ $(document).ready(function () {
   var titleName = "Rachel Turgoose";
   var titleDescr = "Vocals. Woodwinds. Educator.";
 
+  var $body = $("body");
+
 
   initNav();
 
@@ -85,27 +87,25 @@ $(document).ready(function () {
     $('.title-area').append("<span class = 'sub-title'>" + titleDescr + "</span>");
 
     if (pageIdent && pageIdent.file) {
-      $('title').append(" - " + pageIdent.name);
+      $('.title').append(" - " + pageIdent.name);
       $('.title').append(" - " + pageIdent.name);
     }
   } // addPageIdent
 
-//************************************
-
+  // load first BG image (to replace low-res dummy)
+  setTimeout( function() {
+    $body.css('background-image', 'url("img/BG01.jpg")');
+  }, 100);
   // precache images
   for (var i=1; i<=BG_PIC_NUM; i++) {
     new Image().src='img/BG' + twoDigit(i) + '.jpg';
   }
 
-  // load first BG image (to replace low-res dummy)
-
-  $('body').css('background-image', 'url(img/BG01.jpg)');
-
   // set BG change
   var bgNum = 2;
 
   setInterval( function(){
-    $('body').css('background-image', 'url(' + 'img/BG' + twoDigit(bgNum) + '.jpg' + ')');
+    $body.css('background-image', 'url("' + 'img/BG' + twoDigit(bgNum) + '.jpg' + '")');
     (bgNum==BG_PIC_NUM)?(bgNum=1):(bgNum++);
   }, BG_INTERVAL);
 

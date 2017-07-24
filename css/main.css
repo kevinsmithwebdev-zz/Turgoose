@@ -1,12 +1,8 @@
 body {
-  background: url("../img/BG00.jpg") no-repeat center top fixed;
-  transition: background 1s linear;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url("../img/BG00.jpg") no-repeat center top fixed #101010;
+  transition: background 1s ease;
   background-size: cover;
   min-height: 100%;
-  color: #E7DFDD;
 }
 
 .title-area {
