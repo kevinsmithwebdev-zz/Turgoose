@@ -5,7 +5,7 @@ $(document).ready(function () {
   const BG_FADE = 1000; // delay of BG pic fade
 
   var menuList = [
-    { name: 'Home', file: '' },
+    { name: 'Home', file: 'index.html' },
     { name: 'Media', file: 'media.html' },
     { name: 'Gallery', file: 'gallery.html' },
     { name: 'Bio', file: 'bio.html' },
@@ -86,8 +86,7 @@ $(document).ready(function () {
     $('.title-area').append("<span class = 'title'>" + titleName + "</span>");
     $('.title-area').append("<span class = 'sub-title'>" + titleDescr + "</span>");
 
-    if (pageIdent && pageIdent.file) {
-      $('.title').append(" - " + pageIdent.name);
+    if (pageIdent && pageIdent.file && pageIdent.name!="Home") {
       $('.title').append(" - " + pageIdent.name);
     }
   } // addPageIdent
