@@ -2,12 +2,15 @@
 
 // init Masonry after all images have loaded
 $(document).ready(function() {
-  // var proxyStr = "http://CORS-Anywhere.HerokuApp.com/";
-  var strRT = "http://www.rachelturgoose.com/img/gallery/gallery.json";
 
-  $.ajax( { url: strRT, cache: false,
-    success: function(data){
+  var phpFileHandler = "http://www.rachelturgoose.com/get_data.php";
 
+  $.ajax({
+    dataType: 'jsonp',
+    data: 'id=test',
+    jsonp: 'jsonp_callback',
+    url: phpFileHandler,
+    success: function (data) {
       // set up carousel
 
       var myImgs = {
@@ -15,15 +18,17 @@ $(document).ready(function() {
         path: 'img/gallery/',
       }
 
-
       myImgs.list=data;
 
       // compute pic file names thumbnails
 
       for (var i = 0 ; i < data.length ; i++) {
+
         myImgs.list[i].tName = data[i].fName.substr(0, data[i].fName.lastIndexOf('.')) +
               "-tn." + data[i].fName.substr(data[i].fName.lastIndexOf('.') + 1);
+
       }
+
       // Set up freewall grid
 
       var html = '<div class="grid-sizer"></div>';

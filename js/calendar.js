@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  const CAL_MSG = "Come hear Rachel Play ...";
+  const CAL_MSG = "Upcoming performances ...";
 
   var $calArea = $('#calendar-area');
 

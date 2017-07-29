@@ -1,6 +1,9 @@
 body {
-  background: url("../img/BG00.jpg") no-repeat center top fixed #101010;
+  background: url("img/BG00.jpg") no-repeat center top fixed;
   transition: background 1s ease;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   min-height: 100%;
 }
@@ -24,10 +27,24 @@ body {
 
 .sub-title {
   font-family: inherit;
-  font-size: 350%;
+  font-size: 250%;
   display: block;
   text-align: center;
   color: #aaaaee;
+}
+
+#greeting-area {
+  font-family: inherit;
+  font-size: 150%;
+  display: block;
+  margin: 0 auto;
+  color: #E7DFDD;
+  width: 75%;
+}
+
+#greeting-area h3 {
+  text-align: left;
+  line-height: 125%;
 }
 
 .navbar {

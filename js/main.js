@@ -83,8 +83,8 @@ $(document).ready(function () {
       return item.file === pageFName;
     });
 
-    $('.title-area').append("<span class = 'title'>" + titleName + "</span>");
-    $('.title-area').append("<span class = 'sub-title'>" + titleDescr + "</span>");
+    $('.title-area').append("<h1 class = 'title'>" + titleName + "</h1>");
+    $('.title-area').append("<h2 class = 'sub-title'>" + titleDescr + "</h2>");
 
     if (pageIdent && pageIdent.file && pageIdent.name!="Home") {
       $('.title').append(" - " + pageIdent.name);
